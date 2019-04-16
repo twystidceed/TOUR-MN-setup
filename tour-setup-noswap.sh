@@ -188,6 +188,8 @@ rm -rf Tour-linux1.0.3.tar.gz
  stop_daemon
  
  # Deploy binaries to /usr/bin
+ cd ~/$FOLDER/Tour-linux1.0.3/
+ sudo rm $NAME2-qt
  sudo cp $NAME2* /usr/bin/
  sudo chmod 755 -R ~/$FOLDER
  sudo chmod 755 /usr/bin/$NAME2*
