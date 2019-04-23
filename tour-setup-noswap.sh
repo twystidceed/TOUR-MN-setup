@@ -14,7 +14,7 @@ GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-#MON TCP port
+#TCP port
 PORT=5457
 RPC=5458
 
@@ -49,7 +49,7 @@ function stop_daemon {
         if pgrep -x '$DAEMON' > /dev/null; then
             echo -e "${RED}$DAEMON daemon is still running!${NC} \a"
             echo -e "${RED}Attempting to kill...${NC}"
-            pkill $DAEMON
+            pkill -9 $DAEMON
             delay 30
             if pgrep -x '$DAEMON' > /dev/null; then
                 echo -e "${RED}Can't stop $DAEMON! Reboot and try again...${NC} \a"
