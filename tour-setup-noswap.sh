@@ -42,16 +42,16 @@ function delay { echo -e "${GREEN}Sleep for $1 seconds...${NC}"; sleep "$1"; }
 
 #Stop daemon if it's already running
 function stop_daemon {
-    if pgrep -x '$DAEMON' > /dev/null; then
+    if pgrep -x $DAEMON > /dev/null; then
         echo -e "${YELLOW}Attempting to stop $DAEMON${NC}"
         $CLI stop
         delay 30
-        if pgrep -x '$DAEMON' > /dev/null; then
+        if pgrep -x $DAEMON > /dev/null; then
             echo -e "${RED}$DAEMON daemon is still running!${NC} \a"
             echo -e "${RED}Attempting to kill...${NC}"
             pkill -9 $DAEMON
             delay 30
-            if pgrep -x '$DAEMON' > /dev/null; then
+            if pgrep -x $DAEMON > /dev/null; then
                 echo -e "${RED}Can't stop $DAEMON! Reboot and try again...${NC} \a"
                 exit 2
             fi
@@ -339,7 +339,7 @@ then edit the $CONF file and save it in nano: (Ctrl-X + Y + Enter),
 then start the $DAEMON daemon back up:
              to stop:   ${YELLOW}$CLI stop${NC}
              to edit:   ${YELLOW}nano ~/$HIDDEN/$CONF${NC}
-             to start:  ${YELLOW}$DAEMON$ -daemon{NC}
+             to start:  ${YELLOW}$DAEMON -daemon{NC}
 ========================================================================
 To view LSR debug log showing all MN network activity in realtime:
              ${YELLOW}tail -f ~/$HIDDEN/debug.log${NC}
