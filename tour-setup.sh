@@ -42,7 +42,7 @@ function stop_daemon {
         echo -e "${YELLOW}Attempting to stop $DAEMON${NC}"
         $CLI stop
         delay 30
-        if pgrep -x 'tour' > /dev/null; then
+        if pgrep -x 'tourd' > /dev/null; then
             echo -e "${RED}$DAEMON daemon is still running!${NC} \a"
             echo -e "${RED}Attempting to kill...${NC}"
             pkill $DAEMON
