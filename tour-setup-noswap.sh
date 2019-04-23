@@ -257,6 +257,7 @@ masternodeprivkey=$genkey
 EOF
 
 #Finally, starting daemon with new $CONF
+delay 30
 $DAEMON -daemon
 delay 5
 
