@@ -73,11 +73,12 @@ sudo cp tour* /usr/bin/
 sudo chmod 755 /usr/bin/tour*
 
 stop_daemon
+tour-cli addnode 45.12.213.72:5457 onetry
 echo -e "${GREEN}Starting new daemon and initiating monitior script${NC}"
 echo -e "${GREEN}This update REQUIRES a full resync of node${NC}"
 echo -e "${GREEN}you should not have to do anything unless the node doesnt self reactivate${NC}"
 echo -e "${GREEN}If not activated upon sync - Activate in local wallet and check back here${NC}"
-tourd -reindex -daemon
+tourd -daemon
 delay 15
 tourmon.sh
 
