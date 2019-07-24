@@ -78,6 +78,8 @@ echo -e "${GREEN}This update REQUIRES a full resync of node${NC}"
 echo -e "${GREEN}you should not have to do anything unless the node doesnt self reactivate${NC}"
 echo -e "${GREEN}If not activated upon sync - Activate in local wallet and check back here${NC}"
 tourd -daemon
+delay 5
+tour-cli addnode 92.119.114.60:5457 onetry
 tour-cli addnode 45.12.213.72:5457 onetry
 delay 15
 tourmon.sh
