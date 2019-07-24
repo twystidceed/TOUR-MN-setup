@@ -47,6 +47,20 @@ cd ~
 sudo rm /usr/bin/tour
 cd .tour/
 sudo rm -rf mncache* 
+sudo rm -rf masternode.conf
+sudo rm wallet.dat 
+sudo rm -rf .lock 
+sudo rm peers.dat
+sudo rm db.log 
+sudo rm debug.log 
+sudo rm tourd.pid
+sudo rm mnpayments.dat 
+sudo rm mncache.dat
+sudo rm banlist.dat
+sudo rm -R backups/
+sudo rm -R blocks/
+sudo rm -R chainstate/
+sudo rm -R database/
 delay 5
 
 cd ~
