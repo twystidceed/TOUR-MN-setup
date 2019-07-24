@@ -32,5 +32,5 @@ echo '==========================================================================
 echo 'Masternode Information: \n# $NAME-cli getinfo' && $NAME-cli -datadir=$datadir getinfo
 echo '==========================================================================='
 echo 'Usage: $SCRIPT [refresh delay] [datadir index]'
-echo 'Example: $SCRIPT 10 22 will run every 10 seconds and query domod in /$USER/$HIDDEN22'
+echo 'Example: $SCRIPT 10 22 will run every 10 seconds and query tourd in /$USER/$HIDDEN22'
 echo '\n\nPress Ctrl-C to Exit...'"
