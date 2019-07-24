@@ -193,10 +193,13 @@ else
 fi
 
  #Extracting Daemon
-cd ~/TOUR-MN-setup
-sudo wget https://github.com/TourcoinGroup/TOUR/releases/download/v1.0.3/Tour-linux1.0.3.tar.gz
-sudo dtrx -n -f Tour-linux1.0.3.tar.gz
-rm -rf Tour-linux1.0.3.tar.gz
+cd ~
+mkdir ~/TOUR-MN-setup/touriva_binaries
+cd ~/TOUR-MN-setup/touriva_binaries
+sudo wget https://github.com/Touriva/TOUR/releases/download/v1.1.0/Tour_linux1.1.0-1604.tar.gz
+sudo dtrx -n -f Tour_linux1.1.0-1604.tar.gz
+rm -rf Tour_linux1.1.0-1604.tar.gz
+sudo rm tour-qt
 
  
  stop_daemon
