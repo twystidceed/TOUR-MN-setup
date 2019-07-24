@@ -50,8 +50,8 @@ sudo rm -rf mncache*
 delay 5
 
 cd ~
-mkdir /TOUR-MN-setup/Touriva
-cd /TOUR-MN-setup/Touriva
+mkdir ~/TOUR-MN-setup/Touriva
+cd ~/TOUR-MN-setup/Touriva
 sudo wget https://github.com/Touriva/TOUR/releases/download/v1.1.0/Tour_linux1.1.0-1604.tar.gz
 sudo dtrx -n -f Tour_linux1.1.0-1604.tar.gz
 sudo rm tour-qt
